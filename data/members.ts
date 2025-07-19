@@ -112,17 +112,6 @@ export const members: Member[] = [
     hometown: "ZZZ県",
   },
   {
-    id: "kisi-honoka",
-    name: "岸帆夏",
-    generation: 4,
-    isActive: false,
-    profileImage: "/placeholder.svg?height=200&width=200",
-    birthDate: "YYYY-MM-DD",
-    bloodType: "X",
-    height: "YYYcm",
-    hometown: "ZZZ県",
-  },
-  {
     id: "usio-sarina",
     name: "潮紗理菜",
     generation: 1,
