@@ -74,7 +74,7 @@ export default function HinatazakaPortal() {
         <div className="max-w-6xl mx-auto px-4 py-4">
           <div className="text-center mb-6">
             <h1 className="text-3xl font-bold bg-gradient-to-r from-pink-600 to-blue-600 bg-clip-text text-transparent">
-              おひさま ポータル
+              おひさまポータル
             </h1>
             <p className="text-muted-foreground mt-2">日向坂46の現役メンバーや卒業生の動画・ラジオなどを検索できるファンサイト</p>
           </div>
