@@ -5,6 +5,9 @@ import { ExternalLink, Calendar } from "lucide-react"
 import type { Content } from "../types/member"
 import { members } from "../data/members"
 
+import { sendContentClickEvent } from '@/lib/utils'
+import { useSearchParams } from 'next/navigation'
+
 interface ContentCardProps {
   content: Content
 }
@@ -40,6 +43,21 @@ export function ContentCard({ content }: ContentCardProps) {
       default:
         return type
     }
+  }
+
+  const searchParams = useSearchParams()
+  const categoryFilter = searchParams.get('category') || 'すべて'
+  const keyword = searchParams.get('keyword') || ''
+  const membersRaw = searchParams.get('members') || ''
+  const memberFilters = membersRaw ? membersRaw.split(',') : []
+
+  const handleClick = () => {
+    sendContentClickEvent({
+      title: content.title,
+      categoryFilter,
+      memberFilters,
+      keyword,
+    })
   }
 
   return (
