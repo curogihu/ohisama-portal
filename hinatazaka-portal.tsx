@@ -1,4 +1,5 @@
 "use client"
+import Script from "next/script"
 
 import { useState, useMemo } from "react"
 import { Input } from "@/components/ui/input"
@@ -60,17 +61,31 @@ export default function HinatazakaPortal() {
   }
 
   const contentTypes = [
-    { id: "all" as ContentType, label: "すべて", icon: null },
+    { id: "all" as ContentType, label: "全て", icon: null },
     { id: "movie" as ContentType, label: "Movie", icon: Film },
-    // { id: "audio" as ContentType, label: "Audio", icon: Headphones },
+    { id: "audio" as ContentType, label: "Audio", icon: Headphones },
     // { id: "tver" as ContentType, label: "TVer", icon: Tv },
-    // { id: "column" as ContentType, label: "コラム", icon: FileText },
+    { id: "column" as ContentType, label: "コラム", icon: FileText },
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 to-blue-50">
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
+        {/* Google tag (gtag.js) */}
+        <Script 
+          async 
+          src="https://www.googletagmanager.com/gtag/js?id=G-DNC9QPSE9K"
+        />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-DNC9QPSE9K');
+          `}
+        </Script>
         <div className="max-w-6xl mx-auto px-4 py-4">
           <div className="text-center mb-6">
             <h1 className="text-3xl font-bold bg-gradient-to-r from-pink-600 to-blue-600 bg-clip-text text-transparent">
