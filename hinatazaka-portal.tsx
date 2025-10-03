@@ -10,9 +10,12 @@ import { Search, Film, Headphones, Tv, FileText, Filter } from "lucide-react"
 import { ContentCard } from "./components/content-card"
 import { MemberFilter } from "./components/member-filter"
 import { content } from "./data/content"
+import { tverContent } from "./data/content.tver"
 import { members } from "./data/members"
 
 type ContentType = "all" | "movie" | "audio" | "tver" | "column"
+
+export const all_content = [...tverContent, ...content]; // ここで結合
 
 export default function HinatazakaPortal() {
   const [selectedType, setSelectedType] = useState<ContentType>("all")
@@ -21,7 +24,7 @@ export default function HinatazakaPortal() {
   const [showMemberFilter, setShowMemberFilter] = useState(false)
 
   const filteredContent = useMemo(() => {
-    return content.filter((item) => {
+    return all_content.filter((item) => {
       // タイプフィルター
       if (selectedType !== "all" && item.type !== selectedType) {
         return false
