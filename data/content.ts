@@ -1,4 +1,4 @@
-import type { Content } from "../types/member"
+import type { Content } from "../types/member";
 
 export const content: Content[] = [
   {
