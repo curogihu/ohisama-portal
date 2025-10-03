@@ -170,7 +170,7 @@ export const content: Content[] = [
     id: "youtube-16",
     title: "【第三弾】マダイ釣りのはずが、、まさかの高級魚GET！？【みーぱんファミリー】",
     type: "movie",
-    members: ["kamimura-hinano", "hirao-honoka"],
+    members: ["sasaki-mirei", "kawata-hina", "yamaguti-haruyo"],
     url: "https://www.youtube.com/watch?v=vojSNEs9Rmg",
     platform: "YouTube",
     description: "",
